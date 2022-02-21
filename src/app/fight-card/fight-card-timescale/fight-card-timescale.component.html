@@ -1,0 +1,40 @@
+<section>
+  <!-- Display time -->
+  <ol>
+    <li *ngFor="let item of items; let i = index">
+      <abbr *ngIf="i == 0" id="eta" title="Estimated time of arrival"
+        >(ETA)</abbr
+      >
+
+      <time
+        class="time"
+        [class.active]="isSelected(item)"
+        [dateTime]="item.timestamp"
+        (click)="eventClick(item)"
+        (mouseenter)="mouseHover(item)"
+        (mouseleave)="mouseHover()"
+        >{{ item.timestamp | date: "HH:mm" }}</time
+      >
+    </li>
+  </ol>
+
+  <!-- Time scale widget -->
+  <div class="time-scale-container">
+    <span
+      *ngFor="let item of items"
+      (click)="eventClick(item)"
+      (mouseenter)="mouseHover(item)"
+      (mouseleave)="mouseHover()"
+      [ngClass]="{
+        'red-dot': !isLastItem(item),
+        'red-dot-selected': !isLastItem(item) && isSelected(item),
+        'gold-dot': isLastItem(item),
+        'gold-dot-selected': isLastItem(item) && isSelected(item)
+      }"
+    ></span>
+    <!-- Horizontal line through dots -->
+    <div class="line-container">
+      <div class="line"></div>
+    </div>
+  </div>
+</section>

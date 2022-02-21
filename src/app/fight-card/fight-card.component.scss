@@ -1,0 +1,22 @@
+@import "media-queries";
+
+app-fight-card-header {
+  margin-bottom: 81px;
+  display: block;
+}
+
+.body {
+  display: flex;
+  position: absolute;
+  align-items: baseline;
+
+  app-fight-card-body {
+    margin-left: 32px;
+  }
+
+  app-fight-card-image {
+    align-self: flex-start;
+    position: relative;
+    bottom: 82px;
+  }
+}

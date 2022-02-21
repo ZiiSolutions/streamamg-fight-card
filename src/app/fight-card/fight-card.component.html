@@ -1,0 +1,30 @@
+<ng-container *ngIf="event$ | async as event">
+  <app-fight-card-header
+    [timestamp]="event.eventTimestamp"
+    [location]="event.eventLocation"
+  ></app-fight-card-header>
+
+  <section class="body">
+    <app-fight-card-timescale
+      [items]="event.eventDetail"
+      [selected]="selectedItem$ | async"
+      [hovered]="hoveredItem$ | async"
+      (itemSelected)="selectedItem($event)"
+      (itemHovered)="hoveredItem($event)"
+    ></app-fight-card-timescale>
+
+    <app-fight-card-body
+      [items]="event.eventDetail"
+      [selected]="selectedItem$ | async"
+      [hovered]="hoveredItem$ | async"
+      (itemSelected)="selectedItem($event)"
+      (itemHovered)="hoveredItem($event)"
+    ></app-fight-card-body>
+
+    <app-fight-card-image
+      [items]="event.eventDetail"
+      [item]="selectedItem$ | async"
+      [hovered]="hoveredItem$ | async"
+    ></app-fight-card-image>
+  </section>
+</ng-container>

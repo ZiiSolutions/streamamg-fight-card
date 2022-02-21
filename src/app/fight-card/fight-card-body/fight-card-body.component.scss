@@ -1,0 +1,91 @@
+@import "media-queries";
+@import "colors";
+@import "font-classes";
+
+.fight-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12.5px;
+  min-height: 94px;
+
+  @include respond-below(md) {
+    display: none;
+  }
+}
+
+.names-container {
+  $ease: ease-out;
+
+  display: inline-grid;
+  grid-template-columns: 1fr 20px 1fr;
+  column-gap: 40px;
+  opacity: $default-opacity;
+  cursor: pointer;
+  transition: opacity 600ms $ease;
+
+  .name-one,
+  .name-two {
+    @extend .heading-3;
+    color: $gold;
+    text-align: center;
+    margin: 0;
+  }
+
+  .name-one {
+    justify-self: end;
+  }
+
+  .name-two {
+    justify-self: start;
+  }
+
+  .versus {
+    @extend .body;
+    justify-self: center;
+    align-self: center;
+    color: $gold;
+  }
+
+  .surname {
+    @extend .heading-1;
+    display: block;
+    color: $white;
+    transition: font-size 600ms $ease, line-height 600ms $ease;
+  }
+
+  .surname-active {
+    @extend .heading-1-active;
+  }
+}
+
+// Take care of styles when hovering fighter names
+.names-container:hover {
+  opacity: 100%;
+
+  .surname {
+    @extend .heading-1-active;
+  }
+}
+
+//Selected item detail styling
+.description {
+  @extend .body;
+  color: $gold;
+  text-align: center;
+  margin: 0;
+  max-width: 450px;
+}
+
+.active {
+  opacity: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+// Image
+img {
+  width: 343px;
+  height: 300px;
+}

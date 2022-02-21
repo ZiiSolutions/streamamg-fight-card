@@ -1,0 +1,38 @@
+@import "media-queries";
+@import "colors";
+@import "font-classes";
+
+section {
+  position: relative;
+
+  .image {
+    position: absolute;
+    height: 300px;
+    width: 343px;
+    opacity: 0;
+    transition: opacity 600ms ease-in;
+    // Set colour of alt text which appears when image does not load
+    color: $white;
+
+    @include respond-above(md) {
+      width: 620px;
+      height: 530px;
+    }
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  //Selected item detail styling
+  .description {
+    @extend .body;
+    color: $gold;
+    text-align: center;
+    margin: 0;
+
+    @include respond-above(md) {
+      display: none;
+    }
+  }
+}

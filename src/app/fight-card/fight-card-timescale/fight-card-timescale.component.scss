@@ -1,0 +1,135 @@
+@import "media-queries";
+@import "colors";
+@import "font-classes";
+
+section {
+  @include respond-above(md) {
+    display: flex;
+  }
+}
+
+// ETA abbriviation styling
+#eta {
+  @include center-alignment-and-spacing;
+  align-self: flex-start;
+  font-family: $nimbus-sans;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+  color: $white;
+  margin-bottom: 18px;
+
+  @include respond-above(md) {
+    align-self: center;
+    margin-bottom: 0;
+  }
+}
+
+// Time styling styling
+.time {
+  @extend .heading-2;
+  color: $white;
+  opacity: $default-opacity;
+  cursor: pointer;
+  transition: opacity 500ms ease-out;
+}
+
+ol {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include respond-above(md) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include respond-above(md) {
+      margin-bottom: 79px;
+    }
+  }
+}
+
+// Red line timescale styling
+.time-scale-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 0 8.7px;
+
+  @include respond-above(md) {
+    flex-direction: column;
+    padding-bottom: 86px;
+    padding-top: 17px;
+    margin-left: 45px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-top: 14px;
+    cursor: pointer;
+  }
+
+  @mixin dot-shadow($color) {
+    box-shadow: 0 0 0 4px $color;
+  }
+
+  .red-dot {
+    @extend .dot;
+    background-color: $red;
+  }
+  .red-dot-selected {
+    @include dot-shadow($red-light);
+  }
+  .gold-dot {
+    @extend .dot;
+    background-color: $gold;
+  }
+  .gold-dot-selected {
+    @include dot-shadow($gold-light);
+  }
+
+  span:last-of-type {
+    background-color: $gold;
+    z-index: 12;
+  }
+
+  .line-container {
+    position: absolute;
+    width: 100%;
+    bottom: 4px;
+
+    @include respond-above(md) {
+      height: 79%;
+      left: 3.5px;
+      top: 32px;
+      bottom: 0;
+    }
+
+    .line {
+      background-color: $red;
+      height: 1px;
+      margin: 0 1px;
+
+      @include respond-above(md) {
+        width: 1px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.active {
+  opacity: 100%;
+}

@@ -1,0 +1,18 @@
+<section *ngIf="selected$ | async as selected">
+  <!-- Fight description text displayed on mobile view only -->
+  <p class="description">
+    {{ selected.description | uppercase }}
+  </p>
+
+  <!-- Loading all images up front improves UX as the browser caches images.
+     Otherwise on intial load the UI looks a little sluggish
+     as waiting for server to return each image when hovering or selecting -->
+  <ng-container *ngFor="let item of items">
+    <img
+      [class.show]="item === selected"
+      class="image"
+      [src]="item.imageSource"
+      [alt]="item.altText"
+    />
+  </ng-container>
+</section>

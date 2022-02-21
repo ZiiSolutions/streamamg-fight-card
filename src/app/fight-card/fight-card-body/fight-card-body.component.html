@@ -1,0 +1,32 @@
+<section
+  class="fight-detail-wrapper"
+  (click)="eventClick(item)"
+  *ngFor="let item of items"
+  (mouseenter)="mouseHover(item)"
+  (mouseleave)="mouseHover()"
+>
+  <!-- Contestant names -->
+  <div class="names-container" [class.active]="isSelected(item)">
+    <p class="name-one">
+      {{ fighterName(item) }}
+      <span class="surname" [class.surname-active]="isSelected(item)">{{
+        fighterSurname(item)
+      }}</span>
+    </p>
+    <span class="versus">VS</span>
+    <p class="name-two">
+      {{ fighterName(item, 2)
+      }}<span class="surname" [class.surname-active]="isSelected(item)">{{
+        fighterSurname(item, 2)
+      }}</span>
+    </p>
+  </div>
+  <!-- Fight description text -->
+  <p class="description" [class.hidden]="!isSelected(item)">
+    {{ item.description | uppercase }}
+  </p>
+</section>
+
+<!-- <section *ngIf="selected">
+  <img [alt]="selected.altText" [src]="selected.imageSource" />
+</section> -->

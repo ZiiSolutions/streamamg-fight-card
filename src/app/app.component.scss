@@ -1,0 +1,13 @@
+@import "media-queries";
+
+.fight-card-container {
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 80px;
+
+  @include respond-above(md) {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+  }
+}

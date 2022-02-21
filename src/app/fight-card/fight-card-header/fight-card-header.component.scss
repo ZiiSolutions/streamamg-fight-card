@@ -1,0 +1,19 @@
+@import "colors";
+
+p {
+  margin-top: 16px;
+  span {
+    display: block;
+    color: $white;
+  }
+}
+
+h1 {
+  // text-shadow: -0.5px 0.5px 0 red, 0.5px 0.5px 0 red, 0.5px -0.5px 0 red, -0.5px -0.5px 0 red;
+  -webkit-text-stroke: 1px $white;
+  margin: 0;
+}
+
+.red-stroke {
+  -webkit-text-stroke: 1px $red;
+}

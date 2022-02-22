@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { FightCardBodyComponent } from './fight-card-body.component';
+import { FightCardDetailComponent } from './fight-card-detail.component';
 
 describe('FightCardBodyComponent', () => {
-  let component: FightCardBodyComponent;
-  let fixture: ComponentFixture<FightCardBodyComponent>;
+  let component: FightCardDetailComponent;
+  let fixture: ComponentFixture<FightCardDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FightCardBodyComponent ]
-    })
-    .compileComponents();
+      declarations: [FightCardDetailComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FightCardBodyComponent);
+    fixture = TestBed.createComponent(FightCardDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

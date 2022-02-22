@@ -1,21 +1,12 @@
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  EventEmitter,
-  HostListener,
-  Input,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { EventItem } from '../fight-card.service';
 
 @Component({
-  selector: 'app-fight-card-body',
-  templateUrl: './fight-card-body.component.html',
-  styleUrls: ['./fight-card-body.component.scss'],
+  selector: 'app-fight-card-detail',
+  templateUrl: './fight-card-detail.component.html',
+  styleUrls: ['./fight-card-detail.component.scss'],
 })
-export class FightCardBodyComponent {
+export class FightCardDetailComponent {
   @Input() items: EventItem[];
   @Input() selected: EventItem | null;
   @Input() hovered?: EventItem | null;

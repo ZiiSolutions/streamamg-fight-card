@@ -1,7 +1,13 @@
 @import "colors";
+@import "media-queries";
 
 p {
   margin-top: 16px;
+
+  @include respond-above(md) {
+    margin-top: 12px;
+  }
+
   span {
     display: block;
     color: $white;

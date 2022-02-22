@@ -1,22 +1,43 @@
 @import "media-queries";
 
 app-fight-card-header {
-  margin-bottom: 81px;
   display: block;
+  margin-bottom: 44px;
+
+  @include respond-above(md) {
+    margin-bottom: 72px;
+  }
 }
 
+// The actual body of fight card
 .body {
   display: flex;
-  position: absolute;
-  align-items: baseline;
+  flex-direction: column;
+
+  @include respond-above(md) {
+    flex-direction: row;
+    position: absolute;
+    align-items: baseline;
+  }
 
   app-fight-card-body {
     margin-left: 32px;
+    margin-right: 19px;
+    display: none;
+
+    @include respond-above(md) {
+      display: block;
+    }
   }
 
   app-fight-card-image {
-    align-self: flex-start;
-    position: relative;
-    bottom: 82px;
+    margin-top: 25px;
+
+    @include respond-above(md) {
+      align-self: flex-start;
+      position: relative;
+      bottom: 82px;
+      margin-top: 0;
+    }
   }
 }

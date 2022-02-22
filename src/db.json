@@ -24,18 +24,18 @@
         {
           "timestamp": "2019-12-07T21:07:24Z",
           "description": "10 x 3 mins Heavyweight",
-          "imageSource": "https://s3-alpha-sig.figma.com/img/cf3c/3e60/47ecd4aee4a5dfeea729a2173856a970?Expires=1646611200&Signature=FffPJyPzceCgHP~AEG5vfyiIwgQqR581JECVzaK8KNo8qGZvLsng-HerqVZU404636hJYrJ8G3A6rJ6q754cjp5ftZ59uFuubxq715O1PLTHUfnJb~DcGTkZV1BR5J~6v9qUecfdj-be5D9NPQwf01Gqu78dxS~-5jvQQ5OQWrv5-tA9P0PkXrtx5KnoOPIdy4NNbjpOtlwXhKzMJFqmymZCykcB6TzBGqQI8rLTHy1sHJqIqbhPwwWQu4RsJW39koTO4n1XrZPdbU1~le7DEtlt9RzPTYIIiIk7iY3KP6988qfK0NvmKa4Do~ZaHPW30i1sLSjGXMt3BY5dIX8f9A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+          "imageSource": "https://s3-alpha-sig.figma.com/img/ef34/634b/ed3fe8ed9f623f4b0e7afe8320721398?Expires=1646611200&Signature=WgII0knjXZQQ7D-K8hQFb4uw6a--faQ954dSqmbPGKqoa0SUp4vJhOdaJTHywcw5a7bT1pVCjgSUat6E2zMgfNpJOhShrx1R3OCzUnLMMxy8SkFnEtrV5fQxfgV-NM-BK6GDYkvIVU0QPvwR2qxg93CUPgGg-NcZEC3cEjWDZ-5K2AKPMvyMAvhg4~I9q58OBbnsy8xVpRgkybxTbaK2inzNu-LHJER~jBFlrQ1RuwB1lIgS-AC5uhH7MBnTCI8MkIku3HMAeXRSfa3~3N0KDHvLcWoPHybXiVCYOuFiGwivHLIBd11XqcE2fMPCiw6Peq1mYZUFIYUU2xMTxk0TBQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
           "altText": "Image of Povetkin and Hunter",
-          "fighterOne": { "firstName": "DILLIAN", "surname": "WHYTE" },
-          "fighterTwo": { "firstName": "MARIUSZ", "surname": "WACH" }
+          "fighterOne": { "firstName": "ALEXANDER", "surname": "POVETKIN" },
+          "fighterTwo": { "firstName": "MICHAEL", "surname": "HUNTER" }
         },
         {
           "timestamp": "2019-12-07T22:07:24Z",
           "description": "12 x 3 mins WBA Heavyweight Eliminator",
+          "imageSource": "https://s3-alpha-sig.figma.com/img/cf3c/3e60/47ecd4aee4a5dfeea729a2173856a970?Expires=1646611200&Signature=FffPJyPzceCgHP~AEG5vfyiIwgQqR581JECVzaK8KNo8qGZvLsng-HerqVZU404636hJYrJ8G3A6rJ6q754cjp5ftZ59uFuubxq715O1PLTHUfnJb~DcGTkZV1BR5J~6v9qUecfdj-be5D9NPQwf01Gqu78dxS~-5jvQQ5OQWrv5-tA9P0PkXrtx5KnoOPIdy4NNbjpOtlwXhKzMJFqmymZCykcB6TzBGqQI8rLTHy1sHJqIqbhPwwWQu4RsJW39koTO4n1XrZPdbU1~le7DEtlt9RzPTYIIiIk7iY3KP6988qfK0NvmKa4Do~ZaHPW30i1sLSjGXMt3BY5dIX8f9A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
           "altText": "Image of Whyte and Wach",
-          "imageSource": "https://s3-alpha-sig.figma.com/img/ef34/634b/ed3fe8ed9f623f4b0e7afe8320721398?Expires=1646611200&Signature=WgII0knjXZQQ7D-K8hQFb4uw6a--faQ954dSqmbPGKqoa0SUp4vJhOdaJTHywcw5a7bT1pVCjgSUat6E2zMgfNpJOhShrx1R3OCzUnLMMxy8SkFnEtrV5fQxfgV-NM-BK6GDYkvIVU0QPvwR2qxg93CUPgGg-NcZEC3cEjWDZ-5K2AKPMvyMAvhg4~I9q58OBbnsy8xVpRgkybxTbaK2inzNu-LHJER~jBFlrQ1RuwB1lIgS-AC5uhH7MBnTCI8MkIku3HMAeXRSfa3~3N0KDHvLcWoPHybXiVCYOuFiGwivHLIBd11XqcE2fMPCiw6Peq1mYZUFIYUU2xMTxk0TBQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
-          "fighterOne": { "firstName": "ALEXANDER", "surname": "POVETKIN" },
-          "fighterTwo": { "firstName": "MICHAEL", "surname": "HUNTER" }
+          "fighterOne": { "firstName": "DILLIAN", "surname": "WHYTE" },
+          "fighterTwo": { "firstName": "MARIUSZ", "surname": "WACH" }
         },
         {
           "timestamp": "2019-12-07T00:00:24Z",

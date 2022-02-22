@@ -5,10 +5,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 The project uses json-server to mock backend API for requests
 
 ## How to run
+Install dependencies:
+
+npm install
 
 Run json server:
 
-`npm run start mock:server`
+`npm run mock:server`
 
 Run Application:
 

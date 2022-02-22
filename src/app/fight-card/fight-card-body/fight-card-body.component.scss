@@ -74,6 +74,7 @@
   text-align: center;
   margin: 0;
   max-width: 450px;
+  margin-top: 5px;
 }
 
 .active {
@@ -82,10 +83,4 @@
 
 .hidden {
   visibility: hidden;
-}
-
-// Image
-img {
-  width: 343px;
-  height: 300px;
 }

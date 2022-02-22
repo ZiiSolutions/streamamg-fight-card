@@ -2,21 +2,37 @@
 @import "colors";
 @import "font-classes";
 
+@mixin large-image {
+  width: 620px;
+  height: 530px;
+  margin: 0;
+}
+
 section {
   position: relative;
+  display: flex;
+  justify-content: center;
+
+  @include respond-above(md) {
+    display: block;
+  }
 
   .image {
     position: absolute;
     height: 300px;
     width: 343px;
     opacity: 0;
+    margin-top: 42.81px;
     transition: opacity 600ms ease-in;
-    // Set colour of alt text which appears when image does not load
     color: $white;
 
     @include respond-above(md) {
-      width: 620px;
-      height: 530px;
+      @include large-image;
+    }
+
+    @include tablet-portrait {
+      @include large-image;
+      margin-top: 42.81px;
     }
   }
 

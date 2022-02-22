@@ -15,7 +15,6 @@ $breakpoints: (
 //  RESPOND ABOVE
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// @include respond-above(sm) {}
 @mixin respond-above($breakpoint) {
   // If the breakpoint exists in the map.
   @if map-has-key($breakpoints, $breakpoint) {
@@ -38,7 +37,6 @@ $breakpoints: (
 //  RESPOND BELOW
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// @include respond-below(sm) {}
 @mixin respond-below($breakpoint) {
   // If the breakpoint exists in the map.
   @if map-has-key($breakpoints, $breakpoint) {
@@ -103,6 +101,15 @@ $breakpoints: (
   }
   @if $direction == portrait {
     @media #{$orientation-portrait} {
+      @content;
+    }
+  }
+}
+
+// Added this myself for code reusablity (basically tablet)
+@mixin tablet-portrait {
+  @include orientation(portrait) {
+    @include respond-above(sm) {
       @content;
     }
   }

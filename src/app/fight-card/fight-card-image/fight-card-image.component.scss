@@ -2,6 +2,12 @@
 @import "colors";
 @import "font-classes";
 
+@mixin large-image {
+  width: 620px;
+  height: 530px;
+  margin: 0;
+}
+
 section {
   position: relative;
   display: flex;
@@ -22,9 +28,12 @@ section {
     color: $white;
 
     @include respond-above(md) {
-      width: 620px;
-      height: 530px;
-      margin: 0;
+      @include large-image;
+    }
+
+    @include tablet-portrait {
+      @include large-image;
+      margin-top: 42.81px;
     }
   }
 

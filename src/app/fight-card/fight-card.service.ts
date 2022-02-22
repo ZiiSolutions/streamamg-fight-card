@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, ReplaySubject, Subject, tap } from 'rxjs';
+import { ReplaySubject, tap } from 'rxjs';
 import { AppConfigService } from '../app-config.service';
 
 export interface FighterDetails {
@@ -19,6 +19,7 @@ export interface EventItem {
 }
 
 export interface FightDetail {
+  id: string;
   eventLocation: string;
   eventTimestamp: string;
   eventDetail: EventItem[];

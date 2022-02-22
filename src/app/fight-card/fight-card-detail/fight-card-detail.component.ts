@@ -16,14 +16,14 @@ export class FightCardDetailComponent {
 
   fighterName(item: EventItem, fighterNumber: number = 1) {
     return fighterNumber === 1
-      ? item.fighterOne.firstName
-      : item.fighterTwo.firstName;
+      ? item.fighterOne.firstName.toUpperCase()
+      : item.fighterTwo.firstName.toUpperCase();
   }
 
   fighterSurname(item: EventItem, fighterNumber: number = 1) {
     return fighterNumber === 1
-      ? item.fighterOne.surname
-      : item.fighterTwo.surname;
+      ? item.fighterOne.surname.toUpperCase()
+      : item.fighterTwo.surname.toUpperCase();
   }
 
   isSelected(item: EventItem) {

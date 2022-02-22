@@ -14,8 +14,6 @@ export class FightCardTimescaleComponent {
   @Output() itemSelected = new EventEmitter<EventItem>();
   @Output() itemHovered = new EventEmitter<EventItem | undefined>();
 
-  constructor() {}
-
   eventClick(item: EventItem) {
     this.itemSelected.next(item);
   }

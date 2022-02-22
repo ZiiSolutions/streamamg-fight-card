@@ -3,6 +3,7 @@ import {
   ChangeDetectorRef,
   Component,
   EventEmitter,
+  HostListener,
   Input,
   OnInit,
   Output,
@@ -14,16 +15,13 @@ import { EventItem } from '../fight-card.service';
   templateUrl: './fight-card-body.component.html',
   styleUrls: ['./fight-card-body.component.scss'],
 })
-export class FightCardBodyComponent implements OnInit {
+export class FightCardBodyComponent {
   @Input() items: EventItem[];
   @Input() selected: EventItem | null;
   @Input() hovered?: EventItem | null;
 
   @Output() itemSelected = new EventEmitter<EventItem>();
   @Output() itemHovered = new EventEmitter<EventItem | undefined>();
-
-  constructor() {}
-  ngOnInit() {}
 
   fighterName(item: EventItem, fighterNumber: number = 1) {
     return fighterNumber === 1

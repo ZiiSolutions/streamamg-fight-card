@@ -25,6 +25,7 @@
       [items]="event.eventDetail"
       [item]="selectedItem$ | async"
       [hovered]="hoveredItem$ | async"
+      (itemSelected)="selectedItem($event)"
     ></app-fight-card-image>
   </section>
 </ng-container>

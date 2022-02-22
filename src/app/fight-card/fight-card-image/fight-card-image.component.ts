@@ -1,11 +1,13 @@
 import {
   AfterViewInit,
   Component,
+  EventEmitter,
+  HostListener,
   Input,
   OnChanges,
+  Output,
   SimpleChanges,
 } from '@angular/core';
-import { Subject } from 'rxjs';
 import { EventItem } from '../fight-card.service';
 
 @Component({
@@ -13,27 +15,44 @@ import { EventItem } from '../fight-card.service';
   templateUrl: './fight-card-image.component.html',
   styleUrls: ['./fight-card-image.component.scss'],
 })
-export class FightCardImageComponent implements OnChanges, AfterViewInit {
+export class FightCardImageComponent implements OnChanges {
   @Input() items: EventItem[];
   @Input() item: EventItem | null;
   @Input() hovered?: EventItem | null;
 
-  readonly selected$ = new Subject<EventItem | null>();
+  @Output() itemSelected = new EventEmitter<EventItem>();
 
-  ngAfterViewInit() {
-    this.emitSelected(this.item);
-  }
+  selected: EventItem | null;
 
   ngOnChanges(changes: SimpleChanges): void {
     const { hovered } = changes;
     // When non selected items hovered the image of hovered item needs
     // to be displayed.
-    hovered && hovered.currentValue
-      ? this.emitSelected(hovered.currentValue)
-      : this.emitSelected(this.item);
+    const newItem =
+      hovered && hovered.currentValue ? hovered.currentValue : this.item;
+
+    if (this.selected !== newItem) {
+      this.selected = newItem;
+    }
+  }
+
+  onSwipeRight() {
+    if (!this.selected) return;
+
+    const index = this.items.indexOf(this.selected);
+    index < this.items.length - 1 && this.emitSelected(this.items[index + 1]);
+  }
+
+  onSwipeLeft() {
+    if (!this.selected) return;
+
+    const index = this.items.indexOf(this.selected);
+    index < this.items.length + 1 && this.emitSelected(this.items[index - 1]);
   }
 
   private emitSelected(value: EventItem | null) {
-    value && this.selected$.next(value);
+    if (!value) return;
+    this.selected = value;
+    this.itemSelected.next(value);
   }
 }

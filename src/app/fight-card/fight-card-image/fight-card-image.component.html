@@ -1,4 +1,4 @@
-<section *ngIf="selected$ | async as selected">
+<section *ngIf="selected">
   <!-- Fight description text displayed on mobile view only -->
   <p class="description">
     {{ selected.description | uppercase }}
@@ -13,6 +13,8 @@
       class="image"
       [src]="item.imageSource"
       [alt]="item.altText"
+      (swiperight)="onSwipeRight()"
+      (swipeleft)="onSwipeLeft()"
     />
   </ng-container>
 </section>

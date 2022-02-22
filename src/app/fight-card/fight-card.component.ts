@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Observable, ReplaySubject, Subject, takeUntil, tap } from 'rxjs';
 import { EventItem, FightCardService, FightDetail } from './fight-card.service';
 
@@ -14,6 +14,13 @@ export class FightCardComponent implements OnDestroy {
 
   private readonly destroy$ = new Subject<boolean>();
 
+  @HostListener('window:resize')
+  onResize() {
+    this.screenSize = window.innerWidth;
+  }
+
+  screenSize = window.innerWidth;
+
   constructor(private fightCardService: FightCardService) {
     this.event$ = this.fightCardService.getFight('uri-1');
     this.selectedItem$ = this.fightCardService.firstItem$;
@@ -24,6 +31,7 @@ export class FightCardComponent implements OnDestroy {
   }
 
   hoveredItem(item?: EventItem) {
+    if (this.screenSize < 992) return;
     this.hoveredItem$.next(item);
   }
 

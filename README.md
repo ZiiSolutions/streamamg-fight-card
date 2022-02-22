@@ -6,10 +6,12 @@ The project uses json-server to mock backend API for requests
 
 ## How to run
 
-####Run json server:
+Run json server:
+
 `npm run start mock:server`
 
-####Run Application:
+Run Application:
+
 `npm run start`
 
 If you have nvm installed locally don't forget to `nvm use`

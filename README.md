@@ -7,7 +7,7 @@ The project uses json-server to mock backend API for requests
 ## How to run
 Install dependencies:
 
-npm install
+`npm install`
 
 Run json server:
 

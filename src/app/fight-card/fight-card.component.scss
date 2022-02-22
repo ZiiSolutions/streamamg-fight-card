@@ -21,12 +21,12 @@ app-fight-card-header {
   }
 
   app-fight-card-body {
-    margin-left: 32px;
-    margin-right: 19px;
     display: none;
 
     @include respond-above(md) {
       display: block;
+      margin-left: 32px;
+      margin-right: 19px;
     }
   }
 

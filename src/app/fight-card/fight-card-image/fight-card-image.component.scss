@@ -4,6 +4,12 @@
 
 section {
   position: relative;
+  display: flex;
+  justify-content: center;
+
+  @include respond-above(md) {
+    display: block;
+  }
 
   .image {
     position: absolute;

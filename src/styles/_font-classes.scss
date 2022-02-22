@@ -4,6 +4,15 @@ $nimbus-sans: "nimbus-sans", sans-serif;
 $nimbus-extd: "nimbus-sans-extended", sans-serif;
 $nimbus-cond-l: "nimbus-sans-condensed", sans-serif;
 
+@mixin larger-devices() {
+  @include respond-above(md) {
+    @content;
+  }
+  @include tablet-portrait() {
+    @content;
+  }
+}
+
 // Common font opacity
 $default-opacity: 50%;
 
@@ -26,7 +35,7 @@ $default-opacity: 50%;
   font-weight: 400;
   line-height: 61px;
 
-  @include respond-above(md) {
+  @include larger-devices() {
     //Style Name: display
     font-size: 103px;
     line-height: 124px;
@@ -42,7 +51,7 @@ $default-opacity: 50%;
   font-weight: 700;
   line-height: 18px;
 
-  @include respond-above(md) {
+  @include larger-devices() {
     //Style Name: subtitle
     font-size: 17px;
     line-height: 20px;
@@ -80,7 +89,7 @@ $default-opacity: 50%;
   font-weight: 900;
   line-height: 28px;
 
-  @include respond-above(md) {
+  @include larger-devices() {
     //Style Name: H2
     font-size: 25px;
     line-height: 30px;
@@ -96,7 +105,7 @@ $default-opacity: 50%;
   font-weight: 900;
   line-height: 17px;
 
-  @include respond-above(md) {
+  @include larger-devices() {
     //Style Name: H3
     font-size: 16px;
     line-height: 19px;
@@ -114,7 +123,7 @@ $default-opacity: 50%;
   letter-spacing: 0em;
   text-align: left;
 
-  @include respond-above(md) {
+  @include larger-devices() {
     //Style Name: Description
     font-size: 15px;
     line-height: 18px;

@@ -1,13 +1,21 @@
 @import "media-queries";
+:host {
+  $padding-left-right-mobile: 13px;
+  $padding-left-right-tablet: 32px;
+  $padding-left-right-desktop: 80px;
 
-.fight-card-container {
-  padding-left: 13px;
-  padding-right: 13px;
+  display: block;
+  padding-left: $padding-left-right-mobile;
+  padding-right: $padding-left-right-mobile;
   padding-top: 80px;
 
+  @include tablet-portrait() {
+    padding-left: $padding-left-right-tablet;
+    padding-right: $padding-left-right-tablet;
+  }
+
   @include respond-above(md) {
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 80px;
+    padding-left: $padding-left-right-desktop;
+    padding-right: $padding-left-right-desktop;
   }
 }

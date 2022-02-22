@@ -1,11 +1,23 @@
 import { TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
+import { Mock } from 'ts-mocks';
 import { AppComponent } from './app.component';
+import { FightCardComponent } from './fight-card/fight-card.component';
+import { FightCardService } from './fight-card/fight-card.service';
+import { mockFightDetail } from './util/test-util';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
+      declarations: [AppComponent, FightCardComponent],
+      providers: [
+        {
+          provide: FightCardService,
+          useFactory: () =>
+            new Mock<FightCardService>({
+              getFight: (id: string) => of(mockFightDetail()),
+            }).Object,
+        },
       ],
     }).compileComponents();
   });
@@ -20,12 +32,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('streamamg-fight-card');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('streamamg-fight-card app is running!');
   });
 });

@@ -13,18 +13,19 @@
       (itemHovered)="hoveredItem($event)"
     ></app-fight-card-timescale>
 
-    <app-fight-card-body
+    <app-fight-card-detail
       [items]="event.eventDetail"
       [selected]="selectedItem$ | async"
       [hovered]="hoveredItem$ | async"
       (itemSelected)="selectedItem($event)"
       (itemHovered)="hoveredItem($event)"
-    ></app-fight-card-body>
+    ></app-fight-card-detail>
 
     <app-fight-card-image
       [items]="event.eventDetail"
       [item]="selectedItem$ | async"
       [hovered]="hoveredItem$ | async"
+      (itemSelected)="selectedItem($event)"
     ></app-fight-card-image>
   </section>
 </ng-container>
